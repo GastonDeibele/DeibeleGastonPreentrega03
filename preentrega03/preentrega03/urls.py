@@ -21,7 +21,8 @@ from .view import index
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index,name='home'),
-    path('maquinaria', include('apps.maquinaria.urls')),
-    path('repuestos', include('apps.repuestos.urls')),
-    path('servicios', include('apps.servicios.urls')),
+    path('maquinaria/', include('apps.maquinaria.urls')),
+    path('repuestos/', include('apps.repuestos.urls')),
+    path('servicios/', include('apps.servicios.urls')),
+    path('usuario/', include('apps.usuario.urls')),
 ]

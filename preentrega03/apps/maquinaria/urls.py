@@ -1,6 +1,8 @@
 from django.urls import path 
-from .views import MaquinariaView
+from .views import MaquinariaView,MaquinariaUsuarioList
 
 urlpatterns = [
-    path('',MaquinariaView.as_view(),name='formulariomaquinaria')    
+    path('cargar',MaquinariaView.as_view(),name='formulariomaquinaria'),
+    path('',MaquinariaUsuarioList.as_view(),name='listamaquinaria')
+        
 ]
