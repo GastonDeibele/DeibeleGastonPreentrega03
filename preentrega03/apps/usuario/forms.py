@@ -8,4 +8,4 @@ class LoginForm(AuthenticationForm):
 class RegistroForm(UserCreationForm):
     class Meta:
         model= Usuario
-        fields= ["first_name","last_name","email","password1","password2"]
+        fields= ["first_name","last_name","email","password1","password2","avatar"]
