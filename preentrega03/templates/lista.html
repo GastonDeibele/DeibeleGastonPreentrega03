@@ -2,8 +2,16 @@
 
 {% block content %}
 
+<form method="GET"><input type="search" placeholder = "Buscar" id="input_search" name="input_name" value="">
+
+<buttom type="submit"> Buscar </buttom>
+</form>
 {% for object in objects  %}
-{{ object }} {% endfor %}
+{{ object }}
+<a href="{% url urldetail object.id %} ">Leer mas</a>
+
+{% empty %}<h6>No hay registros encontrados</h6>
+{% endfor %}
 
 {% endblock content %}
 

@@ -1,9 +1,10 @@
 from django.shortcuts import render,redirect
 from .forms import RegistroForm,LoginForm
-from django.views.generic import CreateView
+from django.views.generic import CreateView,UpdateView,DeleteView
 from django.contrib.auth import login,authenticate,logout
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView
+from .models import Usuario
 
 class RegistroView(CreateView):
     form_class=RegistroForm
@@ -32,6 +33,23 @@ class LoginUserView(LoginView):
     success_url= reverse_lazy("home")
     def get_success_url(self):
         return reverse_lazy("home")
+    
+
+class ActualizarUsuario(UpdateView):
+    form_class=RegistroForm
+    template_name="registro.html"
+    success_url= reverse_lazy("home")
+
+    def get_object(self, queryset = ...):
+        user=Usuario.objects.filter(pk=self.request.user.id).first()
+        return user
+   
+
+class EliminarUsuario(DeleteView):
+    model=Usuario
+    template_name='formulariodelete.html'
+
+    success_url= reverse_lazy('home')
 
 
     
