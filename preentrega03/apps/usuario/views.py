@@ -52,5 +52,8 @@ class EliminarUsuario(DeleteView):
     success_url= reverse_lazy('home')
 
 
+
+def acercade(request):
+    return render(request, 'acercade.html')  
     
     

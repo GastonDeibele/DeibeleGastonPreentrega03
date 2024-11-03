@@ -4,26 +4,26 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card">
-                <div class="card-header text-center">
+            <div class="card shadow">
+                <div class="card-header text-center bg-primary text-white">
                     <h4>Iniciar Sesión</h4>
                 </div>
                 <div class="card-body">
                     <form action="" method="post">
                         {% csrf_token %}
                         <div class="mb-3">
-                            {{ form.username.label}}
-                            {{ form.username}}
+                            {{ form.username.label }}
+                            <div class="form-control">{{ form.username }}</div>
                         </div>
                         <div class="mb-3">
-                            {{ form.password.label}}
-                            {{ form.password}}
+                            {{ form.password.label }}
+                            <div class="form-control">{{ form.password }}</div>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Ingresar</button>
                     </form>
                 </div>
                 <div class="card-footer text-center">
-                    <a href="{% url 'formularioregistro' %}">No tienes cuenta? Regístrate</a>
+                    <a href="{% url 'formularioregistro' %}" class="text-primary">No tienes cuenta? Regístrate</a>
                 </div>
             </div>
         </div>
