@@ -4,14 +4,32 @@
 
 <form method="GET"><input type="search" placeholder = "Buscar" id="input_search" name="input_name" value="">
 
-<buttom type="submit"> Buscar </buttom>
-</form>
-{% for object in objects  %}
-{{ object }}
-<a href="{% url urldetail object.id %} ">Leer mas</a>
+<buttom type="submit" class ="btn btn-secondary"> Buscar </buttom>
 
-{% empty %}<h6>No hay registros encontrados</h6>
-{% endfor %}
+<a href="{% url url_add %}" class ="btn btn-success">Agregar</a>
+
+</form>
+<table class="table">  
+    <thead>    
+        <tr>      
+            <th scope="col">#</th>      
+            <th scope="col">Listado</th>
+        </thead>  
+        <tbody>    
+            {% for object in objects  %}
+            <tr>      <th scope="row">{{ object.id }}</th>      <td>{{ object }}</td>      <td><a href="{% url urldetail object.id %} " class ="btn btn-info">Leer mas</a>
+            </td>
+            {% empty %}<h6>No hay registros encontrados</h6>
+            {% endfor %}
+        </tbody></table>
+
+
+
+
+
+
+
+
 
 {% endblock content %}
 

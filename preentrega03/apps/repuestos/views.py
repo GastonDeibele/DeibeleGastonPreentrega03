@@ -21,6 +21,7 @@ class RepuestosUsuarioList(ListView):
 
         context_data= super().get_context_data(**kwargs)
         context_data["urldetail"]="detallerepuesto"
+        context_data["url_add"] = "formulariorepuestos"
         return context_data
         
 

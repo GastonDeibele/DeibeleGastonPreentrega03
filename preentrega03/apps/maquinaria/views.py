@@ -20,8 +20,11 @@ class MaquinariaUsuarioList(ListView):
     def get_context_data(self, **kwargs):
         context_data= super().get_context_data(**kwargs)
         context_data["urldetail"]="detallemaquinaria"
+        context_data["url_add"] = "formulariomaquinaria"
         return context_data
     
+
+
     def get(self, request, *args, **kwargs):
         inputuser = self.request.GET.get("input_name", "")
         queryset = self.get_queryset().filter(marca__icontains=inputuser) 

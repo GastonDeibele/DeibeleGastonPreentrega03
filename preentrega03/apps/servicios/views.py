@@ -19,6 +19,7 @@ class ServiciosUsuarioList(ListView):
     def get_context_data(self, **kwargs):
         context_data= super().get_context_data(**kwargs)
         context_data["urldetail"]="detalleservicio"
+        context_data["url_add"] = "formularioservicios"
         return context_data
 
 
