@@ -14,4 +14,4 @@ Tengo una apps que se llama usuario donde configure la gestion de usuario, mi un
 
 Creo haber aplicados todos los items que pedia la consigna, en caso de que no, hacermelo saber en los comentarios
 
-Sin mas que agregar muchas gracias.
+Sin mas que agregar Muchas Gracias.
